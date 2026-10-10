@@ -12,37 +12,18 @@ description: >-
   package -> DeploymentConfig -> deploy (executor openshell-local) -> wait ->
   query -> zero-egress proof -> cleanup flow. Use when the user asks to deploy an
   agent as a sandbox, sandbox a deployment, run an agent under a Landlock/egress
-  policy, or use the openshell-local executor. Trigger keywords - deploy sandbox,
-  sandboxed agent, openshell deployment, openshell-local executor, sandbox policy,
-  egress policy, landlock, governed deployment, network egress governance,
-  inference.local.
-triggers:
-  - deploy the agent as a sandbox
-  - sandbox the deployment
-  - deploy with openshell
-  - openshell-local executor
-  - run the agent under an egress policy
-  - governed sandbox deployment
-  - landlock the agent
-not-for:
-  - nemo-build-agent (use to scaffold + build the agent image first)
-  - nemo-try-agent (use to query an already-deployed agent)
-  - nemo-setup (use to install and start the platform first)
-  - nemo-status (use for a read-only health dashboard)
+  policy, or use the openshell-local executor. Trigger keywords - sandboxed
+  agent, openshell/governed deployment, network egress governance.
+  Instead of this skill, use `nemo-build-agent` to scaffold + build the agent
+  image first, use `nemo-try-agent` to query a deployed agent, use `nemo-setup` to
+  install and start the platform first, and use `nemo-status` for a read-only
+  health dashboard.
 compatibility: >-
-  nemo-helix >= 0.1.0; requires the nemo-deployments plugin installed with the
-  openshell extra (`openshell>=0.1.2` from PyPI); a running OpenShell docker-driver
-  gateway on :17670 (not :8080, which the platform owns) whose JWT signing keys were
-  generated once with `generate-certs`; a NeMo Helix reachable from inside a sandbox
-  at the sandbox network's gateway address (`--host 0.0.0.0`) with the `openshell-local`
-  executor loaded via
-  `--config packages/nhx_platform/config/local.yaml`; the gateway's `inference.local`
-  route wired to the platform Inference Gateway (`openshell provider create` +
-  `openshell inference set`); the agents plugin for the packaging step. Docker-driver
-  specific (sandboxes reach the platform at `host.openshell.internal:8080`). Linux
-  (glibc >= 2.39) only: verified live end-to-end there, and the `inference.local` hop is
-  unverified on macOS (Docker Desktop resolves the sandbox's `host.openshell.internal`
-  inside its Linux VM, not to the Mac's loopback).
+  nemo-helix >= 0.1.0; requires the nemo-deployments plugin with the openshell extra
+  (openshell>=0.1.2 from PyPI); a running OpenShell docker-driver gateway on :17670 (not :8080,
+  which the platform owns) with the openshell-local executor; the agents plugin for the
+  packaging step. Linux (glibc >= 2.39) only — the inference.local hop is unverified on macOS.
+  See the body Pre-flight section for gateway wiring.
 maturity: experimental
 license: Apache-2.0
 user-invocable: true
@@ -67,6 +48,8 @@ The full worked runbook with narration beats lives in the notebook at `plugins/n
 If the agent image does not exist yet, run `nemo-build-agent` first to scaffold and validate the NAT workflow, then return here to deploy it as a sandbox. This skill does not author agent YAML.
 
 ## Pre-flight
+
+- Linux (glibc >= 2.39) only — the `inference.local` hop is unverified on macOS.
 
 Verify these prerequisites before touching the deploy steps. Do not improvise around a missing one; stop and tell the user what is not running.
 

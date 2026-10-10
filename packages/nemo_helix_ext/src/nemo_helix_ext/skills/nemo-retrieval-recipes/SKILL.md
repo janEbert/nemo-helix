@@ -9,26 +9,15 @@ description: >-
   Evaluator retrieve-eval on frozen eval_beir (NIM providers via Deployment
   Manager). Use when the user has a document corpus, wants better retrieval
   nDCG/recall, or asks to fine-tune Nemotron embed or rerank models on Platform.
-triggers:
-  - fine-tune embedding
-  - fine-tune rerank
-  - embedding recipe
-  - retrieval recipe
-  - domain retrieval
-  - nDCG embedding
-  - retrieve-eval
-  - Nemotron embed
-  - Nemotron rerank
-  - bi_encoder
-  - cross_encoder
-  - retrieval-sdg
-  - Retriever NIM
-  - Ranking NIM
-not-for:
-  - nemo-customizer (chat/SFT/LoRA/DPO/GRPO on language models)
-  - nemo-data-designer-plugin Autopilot create (tabular synthetic columns)
-  - public BEIR/MTEB leaderboard eval unrelated to a domain corpus
-  - generic vector-database selection
+  Trigger phrases include "fine-tune embedding", "fine-tune rerank", "embedding
+  recipe", "retrieval recipe", "domain retrieval", "nDCG embedding",
+  "retrieve-eval", "Nemotron embed", "Nemotron rerank", "bi_encoder",
+  "cross_encoder", "retrieval-sdg", "Retriever NIM", "Ranking NIM".
+  Do not use for public BEIR/MTEB leaderboard eval unrelated to a domain corpus,
+  or generic vector-database selection. Instead of this skill, use
+  `nemo-customizer` for chat/SFT/LoRA/DPO/GRPO on language models, and
+  `nemo-data-designer-plugin Autopilot create` to generate tabular synthetic
+  columns.
 preconditions:
   - nemo_cli_available
   - platform_running

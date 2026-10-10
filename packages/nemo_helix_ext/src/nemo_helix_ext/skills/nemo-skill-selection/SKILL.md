@@ -3,30 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 name: nemo-skill-selection
-description: Top-level skill selector for ambiguous tasks involving NeMo Helix (NVIDIA's agent platform). Picks the right downstream skill for setup, design, specification, agent configuration, build, deployment, testing, observability, status, teardown, evaluation, optimization, security, or model customization. Use when the user needs help deciding where a NeMo Helix task should start.
-triggers:
-  - build an agent
-  - create an agent
-  - deploy an agent
-  - set up nemo
-  - install nemo
-  - try nemo
-  - improve my agent
-  - help me with nemo
-  - nemo helix
-  - shut down nemo
-  - tear down nemo
-  - what is running on nemo
-  - help me ship an agent
-  - fine-tune embedding
-  - retrieval recipe
-  - domain retrieval
-not-for:
-  - setup (use to verify install or to be told how to run the CLI install)
-  - nemo-build-agent (use for the actual scaffold/deploy flow)
-  - superpowers:brainstorming (use for design work unrelated to NeMo Helix)
-  - running downstream workflow or state-changing platform commands (each downstream skill owns its own commands)
-  - loading multiple downstream skills in one turn
+description: 'Top-level skill selector for ambiguous tasks involving NeMo Helix (NVIDIA''s agent platform). Picks the right downstream skill for setup, design, specification, agent configuration, build, deployment, testing, observability, status, teardown, evaluation, optimization, security, or model customization. Use when the user needs help deciding where a NeMo Helix task should start. Triggers include "build/create/deploy an agent", "set up/install/try nemo", "improve my agent", "help me with nemo", "nemo helix", "shut/tear down nemo", "what is running on nemo", "help me ship an agent", "fine-tune embedding", "retrieval recipe", "domain retrieval". Do not use for running downstream workflow or state-changing platform commands (each downstream skill owns its own), or loading multiple downstream skills in one turn. Instead of this skill, use `setup` to verify install or for CLI install guidance, `nemo-build-agent` for the scaffold/deploy flow, and `superpowers:brainstorming` for design work unrelated to NeMo Helix.'
 compatibility: nemo-helix >= 0.1.0; selection plus a host scan on macOS or Linux; works without an installed CLI (selector can pick setup, which then tells the user how to run the CLI install).
 maturity: active
 license: Apache-2.0

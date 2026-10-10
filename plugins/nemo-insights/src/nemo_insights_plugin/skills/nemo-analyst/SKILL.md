@@ -10,18 +10,14 @@ description: >-
   titled Insight carrying the trace IDs that evidence the problem. Answers why
   an agent keeps failing, where it gets things wrong, and the recurring
   problems hiding in production traces.
-triggers:
-  - nemo-analyst
-  - analyze my agent's traces
-  - why my agent keeps failing
-  - generate insights for my agent
-  - find recurring failure patterns
-  - run the analyst
-  - my agent keeps getting things wrong
-not-for:
-  - nemo-intake (use to instrument an agent, ingest telemetry, or query raw spans; this skill interprets telemetry that already landed)
-  - nemo-experiments-upload (use to upload traces and evaluation results into Intake; this skill reads them back out)
-  - nemo-evals (use to author evaluations and metrics; this skill analyzes production behavior)
+  Trigger phrases include "nemo-analyst", "analyze my agent's traces", "why my
+  agent keeps failing", "generate insights for my agent", "find recurring
+  failure patterns", "run the analyst", "my agent keeps getting things wrong".
+  Instead of this skill, use `nemo-intake` to instrument an agent, ingest
+  telemetry, or query raw spans; this skill interprets telemetry that already
+  landed, use `nemo-experiments-upload` to upload traces and evaluation results
+  into Intake; this skill reads them back out, and use `nemo-evals` to author
+  evaluations and metrics; this skill analyzes production behavior.
 compatibility: >-
   nemo-helix >= 0.1.0; requires the Insights plugin, a reachable platform
   with Intake telemetry for the target agent, and a model the platform can call

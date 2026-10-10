@@ -7,21 +7,13 @@ description: >
   A security war-game for an agent through NeMo Helix: register or upload the agent, resolve a
   war-game manifest, synthesize a benign suite, attack/defend/validate, adopt the hardened image.
   Covers red-teaming, hardening, and every `nemo agent-hardener` command.
-triggers:
-  - nemo-agent-hardener
-  - war-game an agent
-  - red-team this agent
-  - harden the agent
-  - agent hardener
-  - attack a deployed agent
-  - prove the agent survives prompt-injection attempts
-  - war-game a LangGraph Dockerfile project
-  - war-game validation_failed result
-not-for:
-  - garak (use for a one-shot garak scan without hardening)
-  - guardrails-plugin (use to author guardrails directly, without a war-game)
-  - nemo-try-agent (use to chat with a deployed agent)
-  - nemo-status (use for a read-only platform dashboard)
+  Trigger phrases include "nemo-agent-hardener", "war-game an agent", "red-team this agent",
+  "harden the agent", "agent hardener", "attack a deployed agent", "prove the agent survives
+  prompt-injection attempts", "war-game a LangGraph Dockerfile project", "war-game
+  validation_failed result". Instead of this skill, use `garak` for a one-shot garak scan without
+  hardening, use `guardrails-plugin` to author guardrails directly, without a war-game, use
+  `nemo-try-agent` to chat with a deployed agent, and use `nemo-status` for a read-only platform
+  dashboard.
 preconditions:
   - nemo_cli_available
 compatibility: >

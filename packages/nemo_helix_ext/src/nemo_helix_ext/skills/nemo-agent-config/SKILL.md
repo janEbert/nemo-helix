@@ -3,25 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 name: nemo-agent-config
-description: Author and validate Platform-managed NeMo Agents agent.yaml files using the nemo-agents-spec-v1 format. Use when the user wants to create, edit, validate, or adapt an agent.yaml file, choose a supported harness, add instructions, skills, MCP servers, tools, environment, or telemetry.
-triggers:
-  - write agent.yaml
-  - create agent.yaml
-  - edit agent.yaml
-  - validate agent.yaml
-  - configure a harness
-  - configure agent harness
-  - nemo-agents-spec-v1
-  - platform agent config
-  - adapt agent.yaml
-  - convert NAT workflow YAML
-  - migrate NAT workflow
-  - convert agent.yml to agent.yaml
-  - NeMo agent.yaml config
-not-for:
-  - nemo-build-agent (use for full agent build and deployment flows)
-  - nemo-model-selection (use when the user only wants model recommendation)
-  - generic YAML editing unrelated to NeMo Helix agents
+description: Author and validate Platform-managed NeMo Agents agent.yaml files using the nemo-agents-spec-v1 format. Use when the user wants to create, edit, validate, or adapt an agent.yaml file, choose a supported harness, add instructions, skills, MCP servers, tools, environment, or telemetry. Trigger phrases include "write agent.yaml", "create agent.yaml", "edit agent.yaml", "validate agent.yaml", "configure a harness", "configure agent harness", "nemo-agents-spec-v1", "platform agent config", "adapt agent.yaml", "convert NAT workflow YAML", "migrate NAT workflow", "convert agent.yml to agent.yaml", "NeMo agent.yaml config". Do not use for generic YAML editing unrelated to NeMo Helix agents. Instead of this skill, use `nemo-build-agent` for full agent build and deployment flows, and use `nemo-model-selection` when the user only wants model recommendation.
 preconditions:
   - nemo_setup_complete
   - agents_plugin_available

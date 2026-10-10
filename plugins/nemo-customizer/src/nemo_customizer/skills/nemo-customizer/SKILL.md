@@ -6,55 +6,15 @@ name: nemo-customizer
 description: >-
   Fine-tune models on NeMo Helix with `automodel`, `unsloth`, or `rl` (all
   `submit`-only): HF dataset conversion, filesets, model entities, and job JSON
-  (hyperparameters, batch, schedule, optimizer) + job polling. `automodel`/`unsloth`
-  run SFT/LoRA as Docker GPU jobs; `rl` runs DPO (preference) or GRPO (NeMo Gym
-  environment + reward) on a Ray cluster (Kubernetes). Covers building and converting
-  NeMo Gym environment packages (native-v1, wheels-v1, adapter-wheels-v1) and Gym
-  rollout-row datasets. Use for train, fine-tune, customize, SFT, LoRA, DPO, GRPO,
-  RLHF, reinforcement learning, reward environment, NeMo Gym, verifiers, Prime
-  Intellect, preference optimization, learning rate, epochs, or nemo customization.
-  For domain embedding/rerank recipes (retrieval SDG, bi_encoder, retrieve-eval), use
-  `nemo-retrieval-recipes` instead of this skill as the conductor.
-triggers:
-  - nemo-customizer
-  - nemo customizer
-  - fine-tune
-  - fine tune
-  - finetune
-  - train a model
-  - customize a model
-  - sft
-  - lora
-  - dpo
-  - grpo
-  - rlhf
-  - reinforcement learning
-  - reward environment
-  - nemo gym
-  - nemo-gym
-  - gym environment
-  - verifiers env
-  - prime intellect
-  - environment fileset
-  - direct preference optimization
-  - preference optimization
-  - preference tuning
-  - automodel
-  - unsloth
-  - nemo-rl
-  - nemo rl
-  - nemo customization
-  - nemo-customization
-  - customizer
-  - customization training
-  - automodel submit
-  - unsloth submit
-  - rl submit
-not-for:
-  - nemo-build-agent (agent scaffold/deploy, not weight training)
-  - nemo-setup (platform install; route here when CLI resolution fails)
-  - safe-synthesizer (tabular synthetic data training)
-  - nemo-retrieval-recipes (domain embed/rerank SDG → train → retrieve-eval conductor)
+  (hyperparameters, batch, schedule, optimizer) + job polling. Use for train,
+  fine-tune, customize, SFT, LoRA, DPO, GRPO, RLHF, reinforcement learning, reward
+  environment, NeMo Gym, verifiers, Prime Intellect, preference optimization,
+  preference tuning, NeMo RL, learning rate, epochs, or nemo customization. For
+  domain embedding/rerank recipes (retrieval SDG, bi_encoder training,
+  retrieve-eval), use `nemo-retrieval-recipes` instead of this skill as the
+  conductor. Instead of this skill, use `nemo-build-agent` for agent scaffold/deploy,
+  `nemo-setup` for platform install, and `safe-synthesizer` for tabular synthetic
+  data training.
 compatibility: >-
   Requires nemo-customizer-plugin and a customization contributor (`nemo.customization.contributors`).
   Platform must expose jobs, files, and models APIs.
@@ -83,6 +43,7 @@ End-to-end **SFT + LoRA** (automodel/unsloth), **DPO**, and **GRPO** (rl) on NeM
 Decision rule below in **Plugin pick**. Batch shell work; reuse resources with `--exist-ok`; skip CLI `--help` unless a command fails.
 
 ## Pre-flight — CLI resolution
+- Requires the nemo-customizer plugin and a customization contributor (`nemo.customization.contributors`); the platform must expose jobs, files, and models APIs.
 
 Run from the **nemo-helix** git root (top-level `pyproject.toml`), not a plugin subfolder. Example commands below use `nemo …` — resolve the invocation **once** before any other step:
 

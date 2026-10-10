@@ -3,17 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 name: nemo-model-selection
-description: Recommends an LLM for a NeMo Helix agent based on what the agent actually has to do, explained in plain English before any benchmark name appears. Use when the user is choosing a model for a new agent, assessing a model they already selected, or choosing a model for Platform agent.yaml.
-triggers:
-  - which model should I use
-  - what model is best for this
-  - help me pick a model
-  - recommend a model
-  - I don't know what model to use
-  - model selection
-  - which LLM
-not-for:
-  - nemo-build-agent (use to scaffold the YAML once requirements are confirmed)
+description: Recommends an LLM for a NeMo Helix agent based on what the agent actually has to do, explained in plain English before any benchmark name appears. Use when the user is choosing a model for a new agent, assessing a model they already selected, or choosing a model for Platform agent.yaml. Trigger phrases include "which model should I use", "what model is best for this", "help me pick a model", "recommend a model", "I don't know what model to use", "model selection", "which LLM". Instead of this skill, use `nemo-build-agent` to scaffold the YAML once requirements are confirmed.
 compatibility: nemo-helix >= 0.1.0; read-only; loads references/benchmark_cache.json if present; works offline; safe under any sandbox.
 maturity: active
 license: Apache-2.0

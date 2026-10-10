@@ -3,19 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 name: nemo-build-agent
-description: Use when a customer asks NeMo Helix to build, implement, package, register, or deploy a new agent from confirmed requirements. Builds the supported LangChain Deep Agents shape through Fabric. Do not use for design-only work, focused agent.yaml editing, testing an existing deployment, onboarding an existing non-Deep-Agents agent, or maintaining NAT workflows.
-triggers:
-  - nemo-build-agent
-  - build an agent
-  - implement the approved agent
-  - package the agent
-  - deploy the new agent
-  - onboard the new agent through Fabric
-not-for:
-  - nemo-agent-config (use for focused agent.yaml authoring or validation)
-  - nemo-try-agent (use to query an existing deployment)
-  - existing agent onboarding through another Fabric adapter
-  - migration or continued operation of NVIDIA NeMo Agent Toolkit workflows
+description: Use when a customer asks NeMo Helix to build, implement, package, register, or deploy a new agent from confirmed requirements. Builds the supported LangChain Deep Agents shape through Fabric. Do not use for design-only work, focused agent.yaml editing, testing an existing deployment, onboarding an existing non-Deep-Agents agent, or maintaining NAT workflows. Trigger phrases include "nemo-build-agent", "build an agent", "implement the approved agent", "package the agent", "deploy the new agent", "onboard the new agent through Fabric". Do not use for existing agent onboarding through another Fabric adapter, or migration or continued operation of NVIDIA NeMo Agent Toolkit workflows. Instead of this skill, use `nemo-agent-config` for focused `agent.yaml` authoring or validation, and use `nemo-try-agent` to query an existing deployment.
 preconditions:
   - nemo_setup_complete
   - workspace_exists

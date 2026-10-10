@@ -3,22 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 name: nemo-experiments-upload
-description: End-to-end guide for getting evaluation data into NeMo Helix Intake so it shows up in the Experiments leaderboard. Create an Experiment, create an Evaluation, then log traces and evaluator results via ATIF (Harbor), chat-completions, or OTLP and view the rollups in Studio. Use when a user wants to create named evaluation runs, publish evaluation results, or compare runs in NeMo Experiments.
-triggers:
-  - log evaluation traces to experiments
-  - upload experiment results
-  - ingest evaluation data
-  - how do I log to experiments
-  - send evaluation traces to nemo experiments
-  - publish evaluation results
-  - log to experiments
-  - upload harbor / atif results
-  - get my eval data into nemo
-not-for:
-  - nemo-intake (use for general instrumentation, telemetry ingestion, trace queries, or evaluator results outside an Experiments leaderboard)
-  - nemo-evals (use to AUTHOR and RUN evaluations/metrics; this skill UPLOADS results)
-  - nemo-status (use for a read-only platform health dashboard)
-  - nemo-skill-selection (use for dispatch when intent is unclear)
+description: End-to-end guide for getting evaluation data into NeMo Helix Intake so it shows up in the Experiments leaderboard. Create an Experiment, create an Evaluation, then log traces and evaluator results via ATIF (Harbor), chat-completions, or OTLP and view the rollups in Studio. Use when a user wants to create named evaluation runs, publish evaluation results, or compare runs in NeMo Experiments. Trigger phrases include "log evaluation traces to experiments", "upload experiment results", "ingest evaluation data", "log to experiments", "send evaluation traces to nemo experiments", "upload harbor / atif results", "get my eval data into nemo". Instead of this skill, use `nemo-intake` for general instrumentation, telemetry ingestion, trace queries, or evaluator results outside an Experiments leaderboard, use `nemo-evals` to AUTHOR and RUN evaluations/metrics; this skill UPLOADS results, use `nemo-status` for a read-only platform health dashboard, and use `nemo-skill-selection` for dispatch when intent is unclear.
 preconditions:
   - nemo_setup_complete
   - workspace_exists

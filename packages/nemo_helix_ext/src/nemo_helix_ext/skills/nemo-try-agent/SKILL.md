@@ -3,28 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 name: nemo-try-agent
-description: Invokes an existing NeMo Helix agent through a named deployment or directly from a local agent YAML config. Use to try, test, or query an agent and inspect its response.
-triggers:
-  - nemo-try-agent
-  - ask my agent
-  - ask my NeMo agent
-  - try the agent
-  - test it out
-  - test support agent with real question
-  - query my agent
-  - what does my agent say
-  - send to the agent
-  - try my nemo agent
-  - invoke deployed agent
-  - query running deployment
-  - invoke local agent config
-  - query local agent config
-  - invoke legacy NAT workflow
-  - test agent and show raw output
-not-for:
-  - nemo-build-agent (use to deploy an agent before querying)
-  - nemo-skill-selection (use to dispatch when intent is unclear)
-  - nemo-status (use for read-only platform health)
+description: Invokes an existing NeMo Helix agent through a named deployment or directly from a local agent YAML config. Use to try, test, or query an agent and inspect its response. Trigger phrases include "nemo-try-agent", "ask my agent", "ask my NeMo agent", "try the agent", "test it out", "test support agent with real question", "query my agent", "what does my agent say", "send to the agent", "try my nemo agent", "invoke deployed agent", "query running deployment", "invoke local agent config", "query local agent config", "invoke legacy NAT workflow", "test agent and show raw output". Instead of this skill, use `nemo-build-agent` to deploy an agent before querying, use `nemo-skill-selection` to dispatch when intent is unclear, and use `nemo-status` for read-only platform health.
 preconditions:
   - nemo_setup_complete
   - workspace_exists

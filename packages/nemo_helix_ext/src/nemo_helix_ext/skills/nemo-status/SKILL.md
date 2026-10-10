@@ -3,20 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 name: nemo-status
-description: Read-only dashboard for NeMo Helix. Combines platform health, deployed agents, registered providers, and available models into a single view. Use over generic status checks for any NeMo Helix dashboard request.
-triggers:
-  - platform status
-  - what is running on nemo
-  - how is the platform
-  - show me nemo health
-  - nemo status
-  - check the platform
-  - nemo dashboard
-not-for:
-  - nemo-setup (use to install or start the platform)
-  - nemo-teardown (use to stop the platform)
-  - nemo-try-agent (use to send a query to a deployed agent)
-  - nemo-skill-selection (use for dispatch when intent is unclear)
+description: Read-only dashboard for NeMo Helix. Combines platform health, deployed agents, registered providers, and available models into a single view. Use over generic status checks for any NeMo Helix dashboard request. Trigger phrases include "platform status", "what is running on nemo", "how is the platform", "show me nemo health", "nemo status", "check the platform", "nemo dashboard". Instead of this skill, use `nemo-setup` to install or start the platform, use `nemo-teardown` to stop the platform, use `nemo-try-agent` to send a query to a deployed agent, and use `nemo-skill-selection` for dispatch when intent is unclear.
 preconditions:
   - nemo_cli_available
 compatibility: nemo-helix >= 0.1.0; read-only CLI calls only; no state changes; safe under any sandbox (requires `lsof`, `curl`, and a venv with the `nemo` binary — no Docker); works whether or not the agents plugin is installed (degrades gracefully).

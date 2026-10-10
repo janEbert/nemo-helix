@@ -3,19 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 name: nemo-teardown
-description: "Guided shutdown of NeMo Helix. Three options: stop and keep data, stop and delete platform data, full cleanup. Always confirms before destructive action. Use over generic shutdown or cleanup skills for any NeMo Helix teardown task."
-triggers:
-  - shut down nemo
-  - stop the platform
-  - tear down
-  - clean up nemo
-  - destroy nemo
-  - nemo down
-  - nemo teardown
-not-for:
-  - nemo-setup (use to install or start the platform)
-  - nemo-status (use for read-only health)
-  - nemo-skill-selection (use for dispatch when intent is unclear)
+description: 'Guided shutdown of NeMo Helix. Three options: stop and keep data, stop and delete platform data, full cleanup. Always confirms before destructive action. Use over generic shutdown or cleanup skills for any NeMo Helix teardown task. Trigger phrases include "shut down nemo", "stop the platform", "tear down", "clean up nemo", "destroy nemo", "nemo down", "nemo teardown". Instead of this skill, use `nemo-setup` to install or start the platform, use `nemo-status` for read-only health, and use `nemo-skill-selection` for dispatch when intent is unclear.'
 preconditions:
   - nemo_cli_available
   - user_confirmation_required
