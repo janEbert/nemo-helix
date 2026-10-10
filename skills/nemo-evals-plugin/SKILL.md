@@ -7,7 +7,7 @@ metadata:
   author: nemo-helix
   maturity: active
   tags: [evaluation, metrics, agent-eval, nemo-helix]
-allowed-tools: Bash, Read
+allowed-tools: Bash Read
 ---
 
 # Evals Plugin

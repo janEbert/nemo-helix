@@ -18,7 +18,7 @@ description: >
 preconditions:
   - nemo_setup_complete
 user-invocable: true
-allowed-tools: Bash, Read, Grep
+allowed-tools: Bash Read Grep
 metadata:
   author: NeMo Helix Team <nemo-helix@nvidia.com>
 ---

@@ -37,7 +37,7 @@ compatibility: NeMo Helix with data-designer [retrieval-sdg], customizer automod
 maturity: active
 license: Apache-2.0
 user-invocable: true
-allowed-tools: Bash, Read, Grep
+allowed-tools: Bash Read Grep
 metadata:
   author: NeMo Helix Team <nemo-helix@nvidia.com>
 version: "0.1.0"

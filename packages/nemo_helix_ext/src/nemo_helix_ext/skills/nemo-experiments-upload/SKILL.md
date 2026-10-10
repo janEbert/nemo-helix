@@ -27,7 +27,7 @@ compatibility: nemo-helix >= 0.1.0; needs a reachable local or remote intake ser
 maturity: beta
 license: Apache-2.0
 user-invocable: true
-allowed-tools: Bash, Read, Write
+allowed-tools: Bash Read Write
 metadata:
   author: NeMo Helix Team <nemo-helix@nvidia.com>
 ---

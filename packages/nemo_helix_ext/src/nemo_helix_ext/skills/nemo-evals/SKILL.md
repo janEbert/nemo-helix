@@ -14,7 +14,7 @@ description: >
 preconditions:
   - evaluator_sdk_available
 compatibility: Designed for installed NeMo Helix skill use; repo-relative SDK paths are developer fallbacks when a checkout is available.
-allowed-tools: Bash, Read
+allowed-tools: Bash Read
 metadata:
   author: NeMo Helix Team <nemo-helix@nvidia.com>
   user-invocable: true

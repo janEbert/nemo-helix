@@ -5,7 +5,7 @@
 name: example-debug
 description: Demonstrates plugin skill companion file installation from the example plugin.
 version: 0.1
-allowed-tools: Bash, Read
+allowed-tools: Bash Read
 metadata:
   author: NeMo Helix Team <nemo-helix@nvidia.com>
 ---

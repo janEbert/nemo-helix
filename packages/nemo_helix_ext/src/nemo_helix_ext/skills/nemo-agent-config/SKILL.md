@@ -29,7 +29,7 @@ compatibility: nemo-helix >= 0.1.0; writes or edits agents/<name>/agent.yaml; va
 maturity: active
 license: Apache-2.0
 user-invocable: true
-allowed-tools: Read, Write, Edit, Bash
+allowed-tools: Read Write Edit Bash
 metadata:
   author: NeMo Helix Team <nemo-helix@nvidia.com>
 ---

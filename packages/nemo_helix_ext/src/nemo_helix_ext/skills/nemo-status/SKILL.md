@@ -23,7 +23,7 @@ compatibility: nemo-helix >= 0.1.0; read-only CLI calls only; no state changes; 
 maturity: active
 license: Apache-2.0
 user-invocable: true
-allowed-tools: Bash, Read
+allowed-tools: Bash Read
 metadata:
   author: NeMo Helix Team <nemo-helix@nvidia.com>
 ---

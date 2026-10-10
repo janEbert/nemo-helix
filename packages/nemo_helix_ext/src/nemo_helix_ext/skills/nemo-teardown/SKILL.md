@@ -23,7 +23,7 @@ compatibility: nemo-helix >= 0.1.0; uses `nemo services stop`, Docker only to re
 maturity: active
 license: Apache-2.0
 user-invocable: true
-allowed-tools: Bash, Read
+allowed-tools: Bash Read
 metadata:
   author: NeMo Helix Team <nemo-helix@nvidia.com>
 ---

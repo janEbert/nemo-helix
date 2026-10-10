@@ -24,7 +24,7 @@ compatibility: NeMo Helix >= 0.4.0; installs the optional NeMo Agents plugin wit
 maturity: beta
 license: Apache-2.0
 user-invocable: true
-allowed-tools: Bash, Read, Write, Edit
+allowed-tools: Bash Read Write Edit
 metadata:
   author: NeMo Helix Team <nemo-helix@nvidia.com>
 ---

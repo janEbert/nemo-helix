@@ -29,7 +29,7 @@ compatibility: >-
 maturity: beta
 license: Apache-2.0
 user-invocable: true
-allowed-tools: Bash, Read
+allowed-tools: Bash Read
 metadata:
   author: NeMo Helix Team <nemo-helix@nvidia.com>
 ---
